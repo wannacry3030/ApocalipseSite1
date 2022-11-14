@@ -1,22 +1,63 @@
-.container {
-  display: flex;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
+@import url("css2.css");
+html {
+  background: radial-gradient(ellipse at bottom, #223142 0%, #000000 100%);
+  background-attachment: fixed;
+  color: #fff;
+  font-family: "Press Start 2P", sans-serif;
+  font-size: 14px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
+  min-width: 512;
 }
-.logo {
+.title {
+  text-align: center;
+  width: 100%;
   margin: 2rem;
+  min-width: 512;
+  display: inline-block;
 }
-.links-social {
+/* .links-social {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
+
 .zoom {
   transition: transform 0.2s;
 }
 .zoom:hover {
   transform: scale(2);
 }
-.social {
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltip-text {
+  visibility: hidden;
+  width: 150px;
+  background: black;
+  color: #fff;
+  text-align: center;
+  padding: 3px 0;
+  line-height: 2;
+
+  position: absolute;
+  z-index: 1;
+  top: calc(100% + 10px);
+  left: 50%;
+  margin-left: -75px;
+}
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  animation: out_of_alpha_2 0.5s;
+}
+@keyframes out_of_alpha_2 {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
