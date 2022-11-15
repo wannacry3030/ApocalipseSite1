@@ -1,4 +1,17 @@
 @import url("css2.css");
+@media (-webkit-min-device-pixel-ratio: 1.25) {
+  html {
+    zoom: 80%;
+    -ms-zoom: 80%;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2) {
+  html {
+    zoom: 100%;
+    -ms-zoom: 100%;
+  }
+}
 html {
   background: radial-gradient(ellipse at bottom, #223142 0%, #000000 100%);
   background-attachment: fixed;
@@ -7,6 +20,39 @@ html {
   font-size: 14px;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
   min-width: 512;
+}
+h1,
+h2,
+h3 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  outline: none;
+}
+body {
+  animation: out_of_alpha 3s;
+}
+#language_div {
+  display: none;
+  padding-top: 10px;
+  line-height: 2;
+}
+@keyframes out_of_alpha {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .title {
   text-align: center;
@@ -60,4 +106,103 @@ html {
   100% {
     opacity: 1;
   }
+}
+.yellow-text {
+  color: #f3d26c;
+  text-shadow: 0 0 10px rgba(255, 255, 0, 0.3);
+}
+.red-text {
+  color: #d49493;
+  text-shadow: 0 0 10px rgba(212, 148, 147);
+}
+.lime-text {
+  color: #db57d3;
+  text-shadow: 0 0 10px rgba(219, 87, 211);
+}
+.cyan-text {
+  color: #bb1ccb;
+  text-shadow: 0 0 10px rgba(187, 28, 203);
+}
+.blink {
+  -webkit-animation: blink 2s linear infinite;
+  animation: blink 2s linear infinite;
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* DIVTABLES */
+.divTables {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.divTable,
+.divTable2 {
+  display: table;
+  table-layout: fixed;
+  margin: 10px;
+}
+.divTable {
+  width: 100%;
+  max-width: 1480px;
+}
+.divTableRow {
+  display: table-row;
+}
+.divTableCell,
+.divTableCellInfo,
+.divTableCellButtons,
+.divTableHead,
+.divTableCellRed,
+.divTableCellYellow,
+.divTableCellLime,
+.divTableCellCyan,
+.divTableCellMagenta,
+.divTableHeadRed,
+.divTableHeadYellow,
+.divTableHeadLime,
+.divTableHeadCyan,
+.divTableHeadMagenta {
+  display: table-cell;
+  padding: 10px 0px;
+}
+.divTableCell,
+.divTableCellInfo,
+.divTableCellButtons,
+.divTableHead {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+}
+.divTableCell {
+  cursor: pointer;
+}
+
+.divTableCellButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
 }
